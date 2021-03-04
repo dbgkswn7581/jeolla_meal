@@ -5,11 +5,12 @@ import discord
 from discord.ext import commands
 from itertools import cycle
 import emoji
+import os
 
 # Client Id : 816671240293974066
-# Client Token : ODE2NjcxMjQwMjkzOTc0MDY2.YD-WXA.NXWbWfzy6gjnbSvGQRA0nXRHGfA
+# Client Token : 
 
-Token = "ODE2NjcxMjQwMjkzOTc0MDY2.YD-WXA.NXWbWfzy6gjnbSvGQRA0nXRHGfA"
+
 client = commands.Bot(command_prefix='#')
 
 
@@ -241,4 +242,4 @@ async def meal(ctx):
     await ctx.send(embed=embed)
 
 
-client.run(Token)
+client.run(os.environ['token'])
